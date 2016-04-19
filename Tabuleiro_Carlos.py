@@ -13,17 +13,34 @@ class Tabuleiro():
     def __init__(self,nome):
         self.root = tk.Tk()
         self.Canvas = tk.Canvas(self.root,width = 200, height = 200)
-        def callback(w):
-            print(str(w))  
-        self.b1 = tk.Button(self.root, text="OK1", command=callback(1), width = 10, height = 5)
-        self.b2 = tk.Button(self.root, text="OK2", command=callback(2), width = 10, height = 5)
-        self.b3 = tk.Button(self.root, text="OK3", command=callback(3), width = 10, height = 5)        
-        self.b4 = tk.Button(self.root, text="OK4", command=callback(4), width = 10, height = 5)
-        self.b5 = tk.Button(self.root, text="OK5", command=callback(5), width = 10, height = 5)
-        self.b6 = tk.Button(self.root, text="OK6", command=callback(6), width = 10, height = 5)
-        self.b7 = tk.Button(self.root, text="OK7", command=callback(7), width = 10, height = 5)
-        self.b8 = tk.Button(self.root, text="OK8", command=callback(8), width = 10, height = 5)
-        self.b9 = tk.Button(self.root, text="OK9", command=callback(9), width = 10, height = 5)
+        self.nome = self.root.title(nome)
+        def callback1():
+            print(1)  
+        def callback2():
+            print(2) 
+        def callback3():
+            print(3) 
+        def callback4():
+            print(4) 
+        def callback5():
+            print(5) 
+        def callback6():
+            print(6) 
+        def callback7():
+            print(7) 
+        def callback8():
+            print(8) 
+        def callback9():
+            print(9) 
+        self.b1 = tk.Button(self.root, text="OK1", command=callback1, width = 10, height = 5)
+        self.b2 = tk.Button(self.root, text="OK2", command=callback2, width = 10, height = 5)
+        self.b3 = tk.Button(self.root, text="OK3", command=callback3, width = 10, height = 5)        
+        self.b4 = tk.Button(self.root, text="OK4", command=callback4, width = 10, height = 5)
+        self.b5 = tk.Button(self.root, text="OK5", command=callback5, width = 10, height = 5)
+        self.b6 = tk.Button(self.root, text="OK6", command=callback6, width = 10, height = 5)
+        self.b7 = tk.Button(self.root, text="OK7", command=callback7, width = 10, height = 5)
+        self.b8 = tk.Button(self.root, text="OK8", command=callback8, width = 10, height = 5)
+        self.b9 = tk.Button(self.root, text="OK9", command=callback9, width = 10, height = 5)
         
         self.b1.pack()
         self.b2.pack()
@@ -48,5 +65,5 @@ class Tabuleiro():
       
     
          
-a = Tabuleiro()
+a = Tabuleiro("jogo da velha")
 tk.mainloop()
