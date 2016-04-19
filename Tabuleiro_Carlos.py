@@ -22,8 +22,8 @@ class Tabuleiro():
         self.Canvas.create_text(80,10,text = "Tranquilidade na nave", fill = "red")
         self.Canvas.pack()
         self.Canvas2 = tk.Canvas(self.label3,width = 200, height = 20)
-        def callback1(lista):
-            lista.append(1)
+        def callback1():
+            return -1
         
         jogadas = []
         self.b1 = tk.Button(self.label2, text="OK1", width = 10, height = 5)
@@ -37,7 +37,18 @@ class Tabuleiro():
         self.b9 = tk.Button(self.label2, text="OK9", width = 10, height = 5)
         
         
-        self.b1.configure(command = callback1(jogadas))
+        self.b1.configure(command = callback1)
+        self.b2.configure(command = callback1)
+        self.b3.configure(command = callback1)
+        self.b4.configure(command = callback1)
+        self.b5.configure(command = callback1)
+        self.b6.configure(command = callback1)
+        self.b7.configure(command = callback1)
+        self.b8.configure(command = callback1)
+        self.b9.configure(command = callback1)
+        
+        a = 0        
+        
         self.b1.pack()
         self.b2.pack()
         self.b3.pack()
@@ -58,7 +69,7 @@ class Tabuleiro():
         self.b8.grid(row = 2, column = 1)
         self.b9.grid(row = 2, column = 2)
         
-        if len(jogadas) % 2 ==0 :
+        if a % 2 ==0 :
             self.Canvas2.create_text(80,10,text = "Proxima jogada:X", fill = "red")
         else:
             self.Canvas2.create_text(80,10,text = "Proxima jogada:O", fill = "red")
