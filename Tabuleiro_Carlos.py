@@ -11,6 +11,7 @@ class Tabuleiro():
     
     def __init__(self,nome):
         self.root = tk.Tk()
+        self.nome = self.root.title(nome)
         self.label1 = tk.Label()
         self.label2 =tk.Label()
         self.label3 = tk.Label()
@@ -18,7 +19,7 @@ class Tabuleiro():
         self.label2.grid(row = 1, column = 0)
         self.label3.grid(row = 2, column = 0)
         self.Canvas = tk.Canvas(self.label1,width = 200, height = 20, bg = "black")
-        self.Canvas.create_text(80,10,text = "Jogo da velha", fill = "white")
+        self.Canvas.create_text(80,10,text = "{0}".format(nome), fill = "white")
         self.Canvas.pack()
         self.Canvas2 = tk.Canvas(self.label3,width = 200, height = 20, bg = "black")
         def callback1():
@@ -72,6 +73,10 @@ class Tabuleiro():
         else:
             self.Canvas2.create_text(80,10,text = "Proxima jogada:O", fill = "white")
         self.Canvas2.pack()
-        
-a = Tabuleiro("jogo da velha")
+    
+    
+    def iniciar(self):
+        tk.mainloop()
+    
+a = Tabuleiro("Jogo da velha")
 tk.mainloop()
