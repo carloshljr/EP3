@@ -24,6 +24,22 @@ class Tabuleiro():
         self.Canvas2 = tk.Canvas(self.label3,width = 200, height = 20, bg = "black")
         def callback1():
             print(1)
+        def callback2():
+            print(2)
+        def callback3():
+            print(3)
+        def callback4():
+            print(4)
+        def callback5():
+            print(5)
+        def callback6():
+            print(6)        
+        def callback7():
+            print(7)
+        def callback8():
+            print(8)
+        def callback9():
+            print(9)
         
         self.b1 = tk.Button(self.label2, text="", width = 10, height = 5)
         self.b2 = tk.Button(self.label2, text="",width = 10, height = 5)
@@ -37,16 +53,16 @@ class Tabuleiro():
         
         
         self.b1.configure(command = callback1)
-        self.b2.configure(command = callback1)
-        self.b3.configure(command = callback1)
-        self.b4.configure(command = callback1)
-        self.b5.configure(command = callback1)
-        self.b6.configure(command = callback1)
-        self.b7.configure(command = callback1)
-        self.b8.configure(command = callback1)
-        self.b9.configure(command = callback1)
+        self.b2.configure(command = callback2)
+        self.b3.configure(command = callback3)
+        self.b4.configure(command = callback4)
+        self.b5.configure(command = callback5)
+        self.b6.configure(command = callback6)
+        self.b7.configure(command = callback7)
+        self.b8.configure(command = callback8)
+        self.b9.configure(command = callback9)
         
-        a = 0        
+        a = verifica_jogada()        
         
         self.b1.pack()
         self.b2.pack()
