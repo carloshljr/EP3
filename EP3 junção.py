@@ -39,8 +39,10 @@ class Tabuleiro():
     "Classe tabuleiro"
     
     def __init__(self,nome):
+        self.game = jogo()
         self.root = tk.Tk()
         self.nome = self.root.title(nome)
+        self.vez = 0
         self.label1 = tk.Label()
         self.label2 =tk.Label()
         self.label3 = tk.Label()
@@ -52,22 +54,99 @@ class Tabuleiro():
         self.Canvas.pack()
         self.Canvas2 = tk.Canvas(self.label3,width = 200, height = 20, bg = "black")
         def callback1():
+            if self.vez == 0:
+                self.b1.configure(text = "X")
+                self.vez = 1
+            else:
+                self.b1.configure(text = "O")
+                self.vez = 0
+            self.game.recebe_jogada(0,0)
+            self.game.verifica_ganhador()
             print(1)
         def callback2():
+            if self.vez == 0:
+                self.b2.configure(text = "X")
+                self.vez = 1
+            else:
+                self.b2.configure(text = "O")
+                self.vez = 0
+            self.game.recebe_jogada(0,1)
+            self.game.verifica_ganhador()
             print(2)
         def callback3():
+            if self.vez == 0:
+                self.b3.configure(text = "X")
+                self.vez = 1
+            else:
+                self.b3.configure(text = "O")
+                self.vez = 0
+            
+            self.game.recebe_jogada(0,2)
+            self.game.verifica_ganhador()
             print(3)
         def callback4():
+            if self.vez == 0:
+                self.b4.configure(text = "X")
+                self.vez = 1
+            else:
+                self.b4.configure(text = "O")
+                self.vez = 0
+            
+            self.game.recebe_jogada(1,0)
             print(4)
         def callback5():
+            if self.vez == 0:
+                self.b5.configure(text = "X")
+                self.vez = 1
+            else:
+                self.b5.configure(text = "O")
+                self.vez = 0
+            self.game.recebe_jogada(1,1)
+            self.game.verifica_ganhador()
             print(5)
         def callback6():
+            if self.vez == 0:
+                self.b6.configure(text = "X")
+                self.vez = 1
+            else:
+                self.b6.configure(text = "O")
+                self.vez = 0
+           
+            self.game.recebe_jogada(1,2)
+            self.game.verifica_ganhador()
             print(6)        
         def callback7():
+            if self.vez == 0:
+                self.b7.configure(text = "X")
+                self.vez = 1
+            else:
+                self.b7.configure(text = "O")
+                self.vez = 0
+           
+            self.game.recebe_jogada(2,0)
+            self.game.verifica_ganhador()
             print(7)
         def callback8():
+            if self.vez == 0:
+                self.b8.configure(text = "X")
+                self.vez = 1
+            else:
+                self.b8.configure(text = "O")
+                self.vez = 0
+           
+            self.game.recebe_jogada(2,1)
+            self.game.verifica_ganhador()
             print(8)
         def callback9():
+            if self.vez == 0:
+                self.b9.configure(text = "X")
+                self.vez = 1
+            else:
+                self.b9.configure(text = "O")
+                self.vez = 0
+            
+            self.game.recebe_jogada(2,2)
+            self.game.verifica_ganhador()
             print(9)
         
         self.b1 = tk.Button(self.label2, text="", width = 10, height = 5)
@@ -91,7 +170,7 @@ class Tabuleiro():
         self.b8.configure(command = callback8)
         self.b9.configure(command = callback9)
         
-        a = verifica_jogada()        
+
         
         self.b1.pack()
         self.b2.pack()
@@ -103,6 +182,8 @@ class Tabuleiro():
         self.b8.pack()
         self.b9.pack()
         
+               
+        
         self.b1.grid(row = 0, column = 0)
         self.b2.grid(row = 0, column = 1)
         self.b3.grid(row = 0, column = 2)
@@ -113,13 +194,16 @@ class Tabuleiro():
         self.b8.grid(row = 2, column = 1)
         self.b9.grid(row = 2, column = 2)
         
-        if a % 2 ==0 :
+        if self.vez == 0 :
             self.Canvas2.create_text(80,10,text = "Proxima jogada:X", fill = "white")
         else:
             self.Canvas2.create_text(80,10,text = "Proxima jogada:O", fill = "white")
         self.Canvas2.pack()
     
+        
     
+        
+        
     def iniciar(self):
         tk.mainloop()
     

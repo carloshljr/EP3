@@ -5,11 +5,13 @@ Created on Mon Apr 18 09:49:28 2016
 @author: Carlosjunior
 """
 import tkinter as tk
+import JOGO_DA_VELHA
 
 class Tabuleiro():
     "Classe tabuleiro"
     
     def __init__(self,nome):
+        self.game = JOGO_DA_VELHA.jogo()
         self.root = tk.Tk()
         self.nome = self.root.title(nome)
         self.label1 = tk.Label()
@@ -62,7 +64,7 @@ class Tabuleiro():
         self.b8.configure(command = callback8)
         self.b9.configure(command = callback9)
         
-        a = verifica_jogada()        
+        a = self.game.recebe_jogada()     
         
         self.b1.pack()
         self.b2.pack()
@@ -84,7 +86,7 @@ class Tabuleiro():
         self.b8.grid(row = 2, column = 1)
         self.b9.grid(row = 2, column = 2)
         
-        if a % 2 ==0 :
+        if a ==0 :
             self.Canvas2.create_text(80,10,text = "Proxima jogada:X", fill = "white")
         else:
             self.Canvas2.create_text(80,10,text = "Proxima jogada:O", fill = "white")
