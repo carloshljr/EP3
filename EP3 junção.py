@@ -1,7 +1,7 @@
 import numpy as np
 class jogo():  
     def __init__(self):
-        self.velha = np.array([[1,2,3],[4,5,6],[7,8,9]])
+        self.velha = [[1,2,3],[4,5,6],[7,8,9]]
         self.vez = 0
     def recebe_jogada(self,linha,coluna):
         if self.vez == 0:
@@ -42,7 +42,7 @@ class Tabuleiro():
         self.game = jogo()
         self.root = tk.Tk()
         self.nome = self.root.title(nome)
-        self.vez = 0
+        self.turno = 0
         self.label1 = tk.Label()
         self.label2 =tk.Label()
         self.label3 = tk.Label()
@@ -56,97 +56,132 @@ class Tabuleiro():
         def callback1():
             if self.vez == 0:
                 self.b1.configure(text = "X")
-                self.vez = 1
+                self.turno = 1
             else:
                 self.b1.configure(text = "O")
                 self.vez = 0
             self.game.recebe_jogada(0,0)
-            self.game.verifica_ganhador()
+            ganhador = self.game.verifica_ganhador()
+            if ganhador == 1:
+                print("X ganhou")
+            if ganhador == 2:
+                print("O ganhou")
             print(1)
         def callback2():
             if self.vez == 0:
                 self.b2.configure(text = "X")
-                self.vez = 1
+                self.turno = 1
             else:
                 self.b2.configure(text = "O")
-                self.vez = 0
+                self.turno = 0
             self.game.recebe_jogada(0,1)
-            self.game.verifica_ganhador()
+            ganhador = self.game.verifica_ganhador()
+            if ganhador == 1:
+                print("X ganhou")
+            if ganhador == 2:
+                print("O ganhou")
             print(2)
         def callback3():
             if self.vez == 0:
                 self.b3.configure(text = "X")
-                self.vez = 1
+                self.turno = 1
             else:
                 self.b3.configure(text = "O")
-                self.vez = 0
-            
+                self.turno = 0
             self.game.recebe_jogada(0,2)
-            self.game.verifica_ganhador()
+            ganhador = self.game.verifica_ganhador()
+            if ganhador == 1:
+                print("X ganhou")
+            if ganhador == 2:
+                print("O ganhou")
             print(3)
         def callback4():
-            if self.vez == 0:
+            if self.turno == 0:
                 self.b4.configure(text = "X")
-                self.vez = 1
+                self.turno = 1
             else:
                 self.b4.configure(text = "O")
-                self.vez = 0
-            
+                self.turno = 0
             self.game.recebe_jogada(1,0)
+            ganhador = self.game.verifica_ganhador()
+            if ganhador == 1:
+                print("X ganhou")
+            if ganhador == 2:
+                print("O ganhou")
             print(4)
         def callback5():
-            if self.vez == 0:
+            if self.turno == 0:
                 self.b5.configure(text = "X")
-                self.vez = 1
+                self.turno = 1
             else:
                 self.b5.configure(text = "O")
-                self.vez = 0
+                self.turno = 0
             self.game.recebe_jogada(1,1)
-            self.game.verifica_ganhador()
+            ganhador = self.game.verifica_ganhador()
+            if ganhador == 1:
+                print("X ganhou")
+            if ganhador == 2:
+                print("O ganhou")
             print(5)
         def callback6():
-            if self.vez == 0:
+            if self.turno == 0:
                 self.b6.configure(text = "X")
-                self.vez = 1
+                self.turno = 1
             else:
                 self.b6.configure(text = "O")
-                self.vez = 0
+                self.turno = 0
            
             self.game.recebe_jogada(1,2)
-            self.game.verifica_ganhador()
+            ganhador = self.game.verifica_ganhador()
+            if ganhador == 1:
+                print("X ganhou")
+            if ganhador == 2:
+                print("O ganhou")
             print(6)        
         def callback7():
-            if self.vez == 0:
+            if self.turno == 0:
                 self.b7.configure(text = "X")
                 self.vez = 1
             else:
                 self.b7.configure(text = "O")
-                self.vez = 0
+                self.turno = 0
            
             self.game.recebe_jogada(2,0)
-            self.game.verifica_ganhador()
+            ganhador = self.game.verifica_ganhador()
+            if ganhador == 1:
+                print("X ganhou")
+            if ganhador == 2:
+                print("O ganhou")
             print(7)
         def callback8():
-            if self.vez == 0:
+            if self.turno == 0:
                 self.b8.configure(text = "X")
-                self.vez = 1
+                self.turno = 1
             else:
                 self.b8.configure(text = "O")
-                self.vez = 0
+                self.turno = 0
            
             self.game.recebe_jogada(2,1)
-            self.game.verifica_ganhador()
+            ganhador = self.game.verifica_ganhador()
+            if ganhador == 1:
+                print("X ganhou")
+            if ganhador == 2:
+                print("O ganhou")
             print(8)
         def callback9():
-            if self.vez == 0:
+            if self.turno == 0:
                 self.b9.configure(text = "X")
-                self.vez = 1
+                self.turno = 1
             else:
                 self.b9.configure(text = "O")
-                self.vez = 0
+                self.turno = 0
             
             self.game.recebe_jogada(2,2)
-            self.game.verifica_ganhador()
+            ganhador = self.game.verifica_ganhador()
+            if ganhador == 1:
+                print("X ganhou")
+            if ganhador == 2:
+                print("O ganhou")
             print(9)
         
         self.b1 = tk.Button(self.label2, text="", width = 10, height = 5)
