@@ -65,6 +65,7 @@ class Tabuleiro():
                 self.Canvas2.create_text(80,10,text = "Proxima jogada:X", fill = "white")
                 self.vez = 0
                 self.game.velha[0][0] = 2
+                self.vez = 1
             self.game.recebe_jogada(0,0)
             ganhador = self.game.verifica_ganhador()
             if ganhador == 1:
@@ -75,7 +76,6 @@ class Tabuleiro():
         def callback2():
             if self.vez == 0:
                 self.b2.configure(text = "X")
-
                 self.Canvas2.create_text(80,10,text = "Proxima jogada:O", fill = "white")
                 self.vez = 1
                 self.game.velha[0][1]= 0
@@ -120,6 +120,7 @@ class Tabuleiro():
                 self.Canvas2.create_text(80,10,text = "Proxima jogada:X", fill = "white")
                 self.vez = 0
                 self.game.velha[1][0] = 2
+
             self.game.recebe_jogada(1,0)
             ganhador = self.game.verifica_ganhador()
             if ganhador == 1:
@@ -138,6 +139,7 @@ class Tabuleiro():
                 self.Canvas2.create_text(80,10,text = "Proxima jogada:X", fill = "white")
                 self.vez = 0
                 self.game.velha[1][1] = 2
+
             self.game.recebe_jogada(1,1)
             ganhador = self.game.verifica_ganhador()
             if ganhador == 1:
@@ -156,6 +158,7 @@ class Tabuleiro():
                 self.Canvas2.create_text(80,10,text = "Proxima jogada:X", fill = "white")
                 self.vez = 0
                 self.game.velha[1][2] = 2
+
             self.game.recebe_jogada(1,2)
             ganhador = self.game.verifica_ganhador()
             if ganhador == 1:
@@ -262,10 +265,6 @@ class Tabuleiro():
         self.b7.grid(row = 2, column = 0)
         self.b8.grid(row = 2, column = 1)
         self.b9.grid(row = 2, column = 2)
-    
-    
-        self.Canvas2.pack()
-    
         
     
         
