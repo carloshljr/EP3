@@ -66,6 +66,15 @@ class Tabuleiro():
             if ganhador == 1:
                 print("X ganhou")
                 self.game.limpa_jogadas()
+                self.b1.configure(text = "")
+                self.b2.configure(text = "")
+                self.b3.configure(text = "")
+                self.b4.configure(text = "")
+                self.b5.configure(text = "")
+                self.b6.configure(text = "")                
+                self.b7.configure(text = "")
+                self.b8.configure(text = "")
+                self.b9.configure(text = "")
             if ganhador == 2:
                 print("O ganhou")
                 self.game.limpa_jogadas()
