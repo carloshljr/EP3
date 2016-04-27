@@ -59,145 +59,180 @@ class Tabuleiro():
                 self.b1.configure(text = "X")
                 self.Canvas2.create_text(80,10,text = "Proxima jogada:O", fill = "white")
                 self.vez = 1
+                self.game.velha[0][0] = 0
             else:
                 self.b1.configure(text = "O")
                 self.Canvas2.create_text(80,10,text = "Proxima jogada:X", fill = "white")
                 self.vez = 0
+                self.game.velha[0][0] = 2
             self.game.recebe_jogada(0,0)
             ganhador = self.game.verifica_ganhador()
             if ganhador == 1:
                 print("X ganhou")
+                self.game.limpa_jogadas()
             if ganhador == 2:
                 print("O ganhou")
+                self.game.limpa_jogadas()
             print(1)
         def callback2():
             if self.vez == 0:
                 self.b2.configure(text = "X")
                 self.Canvas2.create_text(80,10,text = "Proxima jogada:O", fill = "white")
+                self.game.velha[0][1] = 0                
                 self.vez = 1
             else:
                 self.b2.configure(text = "O")
                 self.Canvas2.create_text(80,10,text = "Proxima jogada:X", fill = "white")
+                self.game.velha[0][1] = 2                
                 self.vez = 0
             self.game.recebe_jogada(0,1)
             ganhador = self.game.verifica_ganhador()
             if ganhador == 1:
                 print("X ganhou")
+                self.game.limpa_jogadas()
             if ganhador == 2:
                 print("O ganhou")
+                self.game.limpa_jogadas()
             print(2)
         def callback3():
             if self.vez == 0:
                 self.b3.configure(text = "X")
                 self.Canvas2.create_text(80,10,text = "Proxima jogada:O", fill = "white")
+                self.game.velha[0][2] = 0                
                 self.vez = 1
             else:
                 self.b3.configure(text = "O")
                 self.Canvas2.create_text(80,10,text = "Proxima jogada:X", fill = "white")
+                self.game.velha[0][2] = 2      
                 self.vez = 0
             self.game.recebe_jogada(0,2)
             ganhador = self.game.verifica_ganhador()
             if ganhador == 1:
                 print("X ganhou")
+                self.game.limpa_jogadas()
             if ganhador == 2:
                 print("O ganhou")
+                self.game.limpa_jogadas()
             print(3)
         def callback4():
             if self.vez == 0:
                 self.b4.configure(text = "X")
                 self.Canvas2.create_text(80,10,text = "Proxima jogada:O", fill = "white")
+                self.game.velha[1][0] = 0      
                 self.vez = 1
             else:
                 self.b4.configure(text = "O")
                 self.Canvas2.create_text(80,10,text = "Proxima jogada:X", fill = "white")
+                self.game.velha[1][0] = 2      
                 self.vez = 0
             self.game.recebe_jogada(1,0)
             ganhador = self.game.verifica_ganhador()
             if ganhador == 1:
                 print("X ganhou")
+                self.game.limpa_jogadas()
             if ganhador == 2:
                 print("O ganhou")
+                self.game.limpa_jogadas()
             print(4)
         def callback5():
             if self.vez == 0:
                 self.b5.configure(text = "X")
                 self.Canvas2.create_text(80,10,text = "Proxima jogada:O", fill = "white")
+                self.game.velha[1][1] = 0      
                 self.vez = 1
             else:
                 self.b5.configure(text = "O")
                 self.Canvas2.create_text(80,10,text = "Proxima jogada:X", fill = "white")
+                self.game.velha[1][1] = 2      
                 self.vez = 0
             self.game.recebe_jogada(1,1)
             ganhador = self.game.verifica_ganhador()
             if ganhador == 1:
                 print("X ganhou")
+                self.game.limpa_jogadas()
             if ganhador == 2:
                 print("O ganhou")
+                self.game.limpa_jogadas()
             print(5)
         def callback6():
             if self.vez == 0:
                 self.b6.configure(text = "X")
                 self.Canvas2.create_text(80,10,text = "Proxima jogada:O", fill = "white")
+                self.game.velha[1][2] = 0      
                 self.vez = 1
             else:
                 self.b6.configure(text = "O")
                 self.Canvas2.create_text(80,10,text = "Proxima jogada:X", fill = "white")
+                self.game.velha[1][2] = 2      
                 self.vez = 0
-
             self.game.recebe_jogada(1,2)
             ganhador = self.game.verifica_ganhador()
             if ganhador == 1:
                 print("X ganhou")
+                self.game.limpa_jogadas()
             if ganhador == 2:
                 print("O ganhou")
+                self.game.limpa_jogadas()
             print(6)        
         def callback7():
             if self.vez == 0:
                 self.b7.configure(text = "X")
                 self.Canvas2.create_text(80,10,text = "Proxima jogada:O", fill = "white")
+                self.game.velha[2][0] = 0     
                 self.vez = 1
             else:
                 self.b7.configure(text = "O")
                 self.Canvas2.create_text(80,10,text = "Proxima jogada:X", fill = "white")
+                self.game.velha[2][0] = 2      
                 self.vez = 0
             self.game.recebe_jogada(2,0)
             ganhador = self.game.verifica_ganhador()
             if ganhador == 1:
                 print("X ganhou")
+                self.game.limpa_jogadas()
             if ganhador == 2:
                 print("O ganhou")
+                self.game.limpa_jogadas()
             print(7)
         def callback8():
             if self.vez == 0:
                 self.b8.configure(text = "X")
                 self.Canvas2.create_text(80,10,text = "Proxima jogada:O", fill = "white")
+                self.game.velha[2][1] = 0      
                 self.vez = 1
             else:
                 self.b8.configure(text = "O")
                 self.Canvas2.create_text(80,10,text = "Proxima jogada:X", fill = "white")
+                self.game.velha[2][1] = 2      
                 self.vez = 0
             self.game.recebe_jogada(2,1)
             ganhador = self.game.verifica_ganhador()
             if ganhador == 1:
                 print("X ganhou")
+                self.game.limpa_jogadas()
             if ganhador == 2:
                 print("O ganhou")
+                self.game.limpa_jogadas()
             print(8)
         def callback9():
             if self.vez == 0:
                 self.b9.configure(text = "X")
                 self.Canvas2.create_text(80,10,text = "Proxima jogada:O", fill = "white")
+                self.game.velha[2][2] = 0      
                 self.vez = 1
             else:
                 self.b9.configure(text = "O")
                 self.Canvas2.create_text(80,10,text = "Proxima jogada:X", fill = "white")
+                self.game.velha[2][2] = 2      
                 self.vez = 0
             self.game.recebe_jogada(2,2)
             ganhador = self.game.verifica_ganhador()
             if ganhador == 1:
                 print("X ganhou")
+                self.game.limpa_jogadas()
             if ganhador == 2:
                 print("O ganhou")
+                self.game.limpa_jogadas()
             print(9)
         
         self.b1 = tk.Button(self.label2, text="", width = 10, height = 5)
