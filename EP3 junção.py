@@ -20,16 +20,12 @@ class jogo():
         soma6 = self.velha[0][2] + self.velha[1][2] + self[2][2]
         soma7 = self.velha[0][0] + self.velha[1][1] + self[2][2]
         soma8 = self.velha[2][0] + self.velha[1][1] + self[0][2]
-        somas = [soma1,soma2,soma3,soma4,soma5,soma6,soma7,soma8]
-        for t in somas:
-            while not (t == 0 or t == 6):
-                return(-1)
-            if t == 6: 
-                return(1)
-            elif t == 0:
-                return(2)
-            else:
-                return(0)
+        if soma1 == 6 or soma2 == 6 or soma3 == 6 or soma4 == 6 or soma5 == 6 or soma6 == 6 or soma7 == 6 or soma8 == 6: 
+            return(1)
+        elif soma1 == 0 or soma2 == 0 or soma3 == 0 or soma4 == 0 or soma5 == 0 or soma6 == 0 or soma7 == 0 or soma8 == 0:
+            return(2)
+        else:
+            return(0)
     def limpa_jogadas(self):
          self.velha = np.array([[1,2,3],[4,5,6],[7,8,9]])
          
@@ -54,12 +50,12 @@ class Tabuleiro():
         self.Canvas.pack()
         self.Canvas2 = tk.Canvas(self.label3,width = 200, height = 20, bg = "black")
         def callback1():
-            if self.vez == 0:
+            if self.turno == 0:
                 self.b1.configure(text = "X")
                 self.turno = 1
             else:
                 self.b1.configure(text = "O")
-                self.vez = 0
+                self.turno = 0
             self.game.recebe_jogada(0,0)
             ganhador = self.game.verifica_ganhador()
             if ganhador == 1:
@@ -68,7 +64,7 @@ class Tabuleiro():
                 print("O ganhou")
             print(1)
         def callback2():
-            if self.vez == 0:
+            if self.turno == 0:
                 self.b2.configure(text = "X")
                 self.turno = 1
             else:
@@ -82,7 +78,7 @@ class Tabuleiro():
                 print("O ganhou")
             print(2)
         def callback3():
-            if self.vez == 0:
+            if self.turno == 0:
                 self.b3.configure(text = "X")
                 self.turno = 1
             else:
@@ -141,7 +137,7 @@ class Tabuleiro():
         def callback7():
             if self.turno == 0:
                 self.b7.configure(text = "X")
-                self.vez = 1
+                self.turno = 1
             else:
                 self.b7.configure(text = "O")
                 self.turno = 0
@@ -229,7 +225,7 @@ class Tabuleiro():
         self.b8.grid(row = 2, column = 1)
         self.b9.grid(row = 2, column = 2)
         
-        if self.vez == 0 :
+        if self.turno == 0 :
             self.Canvas2.create_text(80,10,text = "Proxima jogada:X", fill = "white")
         else:
             self.Canvas2.create_text(80,10,text = "Proxima jogada:O", fill = "white")
