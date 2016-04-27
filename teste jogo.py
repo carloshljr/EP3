@@ -75,7 +75,7 @@ class Tabuleiro():
                 self.b7.configure(text = "")
                 self.b8.configure(text = "")
                 self.b9.configure(text = "")
-            if ganhador == 2:
+            elif ganhador == 2:
                 print("O ganhou")
                 self.game.limpa_jogadas()
                 self.b1.configure(text = "")
@@ -87,6 +87,8 @@ class Tabuleiro():
                 self.b7.configure(text = "")
                 self.b8.configure(text = "")
                 self.b9.configure(text = "")
+            else:
+                print("deu velha")
             print(1)
         def callback2():
             if self.vez == 0:
@@ -113,7 +115,7 @@ class Tabuleiro():
                 self.b7.configure(text = "")
                 self.b8.configure(text = "")
                 self.b9.configure(text = "")
-            if ganhador == 2:
+            elif ganhador == 2:
                 print("O ganhou")
                 self.game.limpa_jogadas()
                 self.b1.configure(text = "")
@@ -125,6 +127,8 @@ class Tabuleiro():
                 self.b7.configure(text = "")
                 self.b8.configure(text = "")
                 self.b9.configure(text = "")
+            else:
+                print("deu velha")
             print(2)
         def callback3():
             if self.vez == 0:
@@ -151,7 +155,7 @@ class Tabuleiro():
                 self.b7.configure(text = "")
                 self.b8.configure(text = "")
                 self.b9.configure(text = "")
-            if ganhador == 2:
+            elif ganhador == 2:
                 print("O ganhou")
                 self.game.limpa_jogadas()
                 self.b1.configure(text = "")
@@ -163,6 +167,8 @@ class Tabuleiro():
                 self.b7.configure(text = "")
                 self.b8.configure(text = "")
                 self.b9.configure(text = "")
+            else:
+                print("deu velha")
             print(3)
         def callback4():
             if self.vez == 0:
@@ -189,7 +195,7 @@ class Tabuleiro():
                 self.b7.configure(text = "")
                 self.b8.configure(text = "")
                 self.b9.configure(text = "")
-            if ganhador == 2:
+            elif ganhador == 2:
                 print("O ganhou")
                 self.game.limpa_jogadas()
                 self.b1.configure(text = "")
@@ -201,6 +207,8 @@ class Tabuleiro():
                 self.b7.configure(text = "")
                 self.b8.configure(text = "")
                 self.b9.configure(text = "")
+            else:
+                print("deu velha")
             print(4)
         def callback5():
             if self.vez == 0:
@@ -227,7 +235,7 @@ class Tabuleiro():
                 self.b7.configure(text = "")
                 self.b8.configure(text = "")
                 self.b9.configure(text = "")
-            if ganhador == 2:
+            elif ganhador == 2:
                 print("O ganhou")
                 self.game.limpa_jogadas()
                 self.b1.configure(text = "")
@@ -239,6 +247,8 @@ class Tabuleiro():
                 self.b7.configure(text = "")
                 self.b8.configure(text = "")
                 self.b9.configure(text = "")
+            else:
+                print("deu velha")
             print(5)
         def callback6():
             if self.vez == 0:
@@ -265,7 +275,7 @@ class Tabuleiro():
                 self.b7.configure(text = "")
                 self.b8.configure(text = "")
                 self.b9.configure(text = "")
-            if ganhador == 2:
+            elif ganhador == 2:
                 print("O ganhou")
                 self.game.limpa_jogadas()
                 self.b1.configure(text = "")
@@ -277,6 +287,8 @@ class Tabuleiro():
                 self.b7.configure(text = "")
                 self.b8.configure(text = "")
                 self.b9.configure(text = "")
+            else:
+                print("deu velha")
             print(6)        
         def callback7():
             if self.vez == 0:
@@ -303,7 +315,7 @@ class Tabuleiro():
                 self.b7.configure(text = "")
                 self.b8.configure(text = "")
                 self.b9.configure(text = "")
-            if ganhador == 2:
+            elif ganhador == 2:
                 print("O ganhou")
                 self.game.limpa_jogadas()
                 self.b1.configure(text = "")
@@ -315,6 +327,8 @@ class Tabuleiro():
                 self.b7.configure(text = "")
                 self.b8.configure(text = "")
                 self.b9.configure(text = "")
+            else:
+                print("deu velha")
             print(7)
         def callback8():
             if self.vez == 0:
@@ -341,7 +355,7 @@ class Tabuleiro():
                 self.b7.configure(text = "")
                 self.b8.configure(text = "")
                 self.b9.configure(text = "")
-            if ganhador == 2:
+            elif ganhador == 2:
                 print("O ganhou")
                 self.game.limpa_jogadas()
                 self.b1.configure(text = "")
@@ -353,6 +367,8 @@ class Tabuleiro():
                 self.b7.configure(text = "")
                 self.b8.configure(text = "")
                 self.b9.configure(text = "")
+            else:
+                print("deu velha")
             print(8)
         def callback9():
             if self.vez == 0:
@@ -379,7 +395,7 @@ class Tabuleiro():
                 self.b7.configure(text = "")
                 self.b8.configure(text = "")
                 self.b9.configure(text = "")
-            if ganhador == 2:
+            elif ganhador == 2:
                 print("O ganhou")
                 self.game.limpa_jogadas()
                 self.b1.configure(text = "")
@@ -391,6 +407,8 @@ class Tabuleiro():
                 self.b7.configure(text = "")
                 self.b8.configure(text = "")
                 self.b9.configure(text = "")
+            else:
+                print("deu velha")
             print(9)
         
         self.b1 = tk.Button(self.label2, text="", width = 10, height = 5)
