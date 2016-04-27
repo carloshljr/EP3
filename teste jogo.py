@@ -1,14 +1,14 @@
 import numpy as np
 class jogo():  
     def __init__(self):
-        self.velha = [[1,4,3],[4,5,6],[7,8,9]]
+        self.velha = [[4,4,4],[4,4,4],[4,4,4]]
         self.vez = 0
     def recebe_jogada(self,linha,coluna):
         if self.vez == 0:
             self.velha[linha][coluna] = 2
             self.vez = 1
         elif self.vez == 1:
-            self.velha[linha][coluna] = 0
+            self.velha[linha][coluna] = -1
             self.vez = 0
             
     def verifica_ganhador(self):
@@ -20,19 +20,15 @@ class jogo():
         soma6 = self.velha[0][2] + self.velha[1][2] + self.velha[2][2]
         soma7 = self.velha[0][0] + self.velha[1][1] + self.velha[2][2]
         soma8 = self.velha[2][0] + self.velha[1][1] + self.velha[0][2]
-        somas = [soma1,soma2,soma3,soma4,soma5,soma6,soma7,soma8]
-        for t in somas:
-            while not (t == 0 or t == 6):
-                return(-1)
-            if t == 6: 
-                return(1)
-            elif t == 0:
-                return(2)
-            else:
-                return(0)
+        if soma1 == 6 or soma2 == 6 or soma3 == 6 or soma4 == 6 or soma5 == 6 or soma7 == 6 or soma8 == 6 or soma6 == 6: 
+            return(1)
+        elif soma1 == -3 or soma2 == -3 or soma3 == -3 or soma4 == -3 or soma5 == -3 or soma6 == -3 or soma7 == -3 or soma8 == -3:
+            return(2)
+        else:
+            return(0)
                 
     def limpa_jogadas(self):
-         self.velha = np.array([[1,4,3],[4,5,6],[7,8,9]])
+         self.velha = np.array([[4,4,4],[4,4,4],[4,4,4]])
          
 import tkinter as tk
 
