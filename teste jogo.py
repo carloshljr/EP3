@@ -267,7 +267,7 @@ class Tabuleiro():
         self.b9.grid(row = 2, column = 2)
         
     
-        
+        self.Canvas2.pack()
         
     def iniciar(self):
         tk.mainloop()
